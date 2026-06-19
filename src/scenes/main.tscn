@@ -6,7 +6,7 @@
 [node name="Main" type="Node2D" unique_id=1975737646]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=556748800]
-position = Vector2(693, 290)
+position = Vector2(147, 103)
 texture = ExtResource("1_rr2wm")
 
 [node name="Player" parent="." unique_id=2103953406 instance=ExtResource("2_32aa5")]

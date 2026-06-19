@@ -1,12 +1,13 @@
 extends CharacterBody2D;
-@export var speed: float = 200;
+@export var speed: float = 400;
+var direction: Vector2;
 
 func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed("moveNorth"):
-		velocity.y += speed;
-	elif Input.is_action_just_pressed("moveSouth"):
-		velocity.y -= speed;
-	elif Input.is_action_just_pressed("moveEast"):
-		velocity.x += speed;
-	elif Input.is_action_just_pressed("moveWest"):
-		velocity.x -= speed;
+	direction = Input.get_vector("moveWest", "moveEast", "moveNorth", "moveSouth");
+	
+	if direction != Vector2.ZERO:
+		velocity = direction * speed;
+	else:
+		velocity = velocity.move_toward(Vector2.ZERO, speed);
+	
+	move_and_slide();

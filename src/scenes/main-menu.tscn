@@ -21,4 +21,5 @@ offset_right = 1017.0
 offset_bottom = 511.0
 text = "quit"
 
+[connection signal="pressed" from="CanvasLayer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="CanvasLayer/Quit" to="." method="_on_quit_pressed"]
