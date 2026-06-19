@@ -8,9 +8,9 @@ script = ExtResource("1_wywc0")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1293568746]
 
 [node name="Play" type="Button" parent="CanvasLayer" unique_id=1344119342]
-offset_left = 304.0
-offset_top = 279.0
-offset_right = 772.0
+offset_left = 67.0
+offset_top = 226.0
+offset_right = 1014.0
 offset_bottom = 342.0
 text = "play"
 
