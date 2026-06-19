@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://d3dqyoaeaefs6"]
+
+[ext_resource type="Script" uid="uid://bj1cqu5vwwwjj" path="res://src/main-menu.gd" id="1_wywc0"]
+
+[node name="MainMenu" type="Node2D" unique_id=2128572243]
+script = ExtResource("1_wywc0")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1293568746]
+
+[node name="Play" type="Button" parent="CanvasLayer" unique_id=1344119342]
+offset_left = 304.0
+offset_top = 279.0
+offset_right = 772.0
+offset_bottom = 342.0
+text = "play"
+
+[node name="Quit" type="Button" parent="CanvasLayer" unique_id=945693608]
+offset_left = 74.0
+offset_top = 406.0
+offset_right = 1017.0
+offset_bottom = 511.0
+text = "quit"
+
+[connection signal="pressed" from="CanvasLayer/Quit" to="." method="_on_quit_pressed"]
