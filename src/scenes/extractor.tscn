@@ -8,6 +8,7 @@ size = Vector2(32, 32)
 [node name="Extractor" type="RigidBody2D" unique_id=744359855]
 mass = 0.001
 gravity_scale = 0.0
+freeze = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1043737817]
 position = Vector2(-8, -8)
