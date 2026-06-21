@@ -30,12 +30,15 @@ collision_mask = 2
 script = ExtResource("1_v4rts")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1780098083]
+rotation = 1.5707964
 script = ExtResource("2_hwyk6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1244260034]
+rotation = 1.5707964
 sprite_frames = SubResource("SpriteFrames_ya6j6")
 animation = &"idle"
-frame_progress = 0.3310152
+frame_progress = 0.8361354
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=903867619]
+rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_l2v1k")
