@@ -10,5 +10,7 @@ func _physics_process(delta: float) -> void:
 	
 	rotation += rotationDirection * rotationSpeed * delta
 	velocity = transform.x * speed * Input.get_axis("moveSouth", "moveNorth")
+	
+	$AnimatedSprite2D.play("idle");
 		
 	move_and_slide();
