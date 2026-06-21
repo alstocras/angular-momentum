@@ -11,7 +11,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("placeObj"):
 		if not tMap.get_cell_source_id(activeCell) == 1:
 			tMap.set_cell(activeCell, 0, Vector2i(0, 0), 1)
-	elif terrain.get_cell_source_id(activeCell) == 2 and tMap.get_cell_source_id(activeCell) == 1:
+	if terrain.get_cell_source_id(activeCell) == 2 and tMap.get_cell_source_id(activeCell) == 0:
 			print("extracting...")
-	elif Input.is_action_just_pressed("removeObj"):
+	if Input.is_action_just_pressed("removeObj"):
 		tMap.erase_cell(activeCell)
