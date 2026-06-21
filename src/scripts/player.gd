@@ -9,5 +9,6 @@ func _physics_process(delta: float) -> void:
 	rotationDirection = Input.get_axis("moveWest", "moveEast");
 	
 	rotation += rotationDirection * rotationSpeed * delta
+	velocity = transform.x * speed * Input.get_axis("moveSouth", "moveNorth")
 		
 	move_and_slide();
