@@ -14,6 +14,9 @@ var bosonSpins: Array = [0, 1, 2]
 var fermionCount: float;
 var fermionSpins: Array = [0.5, 1.5]
 
+@onready var ironLabel = $CanvasLayer/Iron;
+var ironCount: float;
+
 func _process(delta: float) -> void:
 	mousePos = tMap.get_local_mouse_position();
 	activeCell = tMap.local_to_map(mousePos);
@@ -41,3 +44,10 @@ func _process(delta: float) -> void:
 			
 	if Input.is_action_pressed("placeConv"):
 		tMap.set_cell(activeCell, 1, Vector2i(0, 0), 1);
+		
+	for x in range(-lookrange, lookrange):
+		for y in range(-lookrange, lookrange):
+			if (Input.is_action_just_pressed("mineIron") or tMap.get_cell_source_id(Vector2i(x, y)) == 0) and terrain.get_cell_source_id(activeCell) == 3:
+				ironCount += 0.01;
+	ironLabel.text = str(round(ironCount));
+	
