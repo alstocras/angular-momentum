@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://bn2j0n54c3xvx" path="res://src/scripts/iron_turbine.gd" id="1_oosqm"]
 [ext_resource type="Texture2D" uid="uid://bjxifcuulu1hx" path="res://assets/sprites/objects/iron-turbine-generate.png" id="1_qec30"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n2wfo"]
+size = Vector2(16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_oosqm"]
 atlas = ExtResource("1_qec30")
 region = Rect2(0, 0, 16, 16)
@@ -25,17 +28,14 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n2wfo"]
-size = Vector2(16, 16)
-
 [node name="IronTurbine" type="RigidBody2D" unique_id=1449698724]
 freeze = true
 script = ExtResource("1_oosqm")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=139861195]
+shape = SubResource("RectangleShape2D_n2wfo")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1370005713]
 sprite_frames = SubResource("SpriteFrames_tuhc2")
 animation = &"generate"
-frame_progress = 0.97143143
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=139861195]
-shape = SubResource("RectangleShape2D_n2wfo")
+frame_progress = 0.6292287
