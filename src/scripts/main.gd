@@ -26,6 +26,9 @@ func _process(delta: float) -> void:
 	var lookrange = Global.lookRange;
 	Global.buildingMap = tMap;
 	Global.terrainMap = terrain;
+	Global.totalIron = ironCount;
+	Global.totalFermions = fermionCount;
+	Global.totalBosons = bosonCount;
 	mousePos = tMap.get_local_mouse_position();
 	activeCell = tMap.local_to_map(mousePos);
 	
@@ -34,13 +37,13 @@ func _process(delta: float) -> void:
 			if terrain.get_cell_source_id(Vector2i(x, y)) == 2 and tMap.get_cell_source_id(Vector2i(x, y)) == 0:
 				var spin = bosonSpins.pick_random();
 				bosonCount += (0.1 * spin);
-	bosonLabel.text = str(round(bosonCount))
-	
-	for x in range(-lookrange, lookrange):
-		for y in range(-lookrange, lookrange):
 			if terrain.get_cell_source_id(Vector2i(x, y)) == 1 and tMap.get_cell_source_id(Vector2i(x, y)) == 0:
 				var spin = fermionSpins.pick_random();
 				fermionCount += (0.1 * spin);
+			if terrain.get_cell_source_id(Vector2i(x, y)) == 3 and tMap.get_cell_source_id(Vector2i(x, y)) == 0:
+				ironCount += 0.1;
+				
+	bosonLabel.text = str(round(bosonCount))
 	fermionLabel.text = str(round(fermionCount))
 	
 	if Input.is_action_pressed("removeObj"):
@@ -58,17 +61,9 @@ func _process(delta: float) -> void:
 				warner.show();
 				await get_tree().create_timer(1).timeout;
 				warner.hide();
-		
-	for x in range(-lookrange, lookrange):
-		for y in range(-lookrange, lookrange):
-			if terrain.get_cell_source_id(Vector2i(x, y)) == 3 and tMap.get_cell_source_id(Vector2i(x, y)) == 0:
-				ironCount += 0.1;
 				
 	if Input.is_action_pressed("mineIron") and terrain.get_cell_source_id(activeCell) == 3:
 		ironCount += 0.1;
 	ironLabel.text = str(round(ironCount));
 	
-	Global.totalIron = ironCount;
-	Global.totalFermions = fermionCount;
-	Global.totalBosons = bosonCount;
 	

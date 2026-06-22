@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://465rpd5qly35"]
 
-[ext_resource type="Script" uid="uid://bn2j0n54c3xvx" path="res://src/scripts/iron_turbine.gd" id="1_oosqm"]
+[ext_resource type="Script" uid="uid://bfrkce5cjhxog" path="res://src/scripts/iron-turbine.gd" id="1_oosqm"]
 [ext_resource type="Texture2D" uid="uid://bjxifcuulu1hx" path="res://assets/sprites/objects/iron-turbine-generate.png" id="1_qec30"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n2wfo"]
@@ -38,4 +38,4 @@ shape = SubResource("RectangleShape2D_n2wfo")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1370005713]
 sprite_frames = SubResource("SpriteFrames_tuhc2")
 animation = &"generate"
-frame_progress = 0.6292287
+frame_progress = 0.642711
