@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://bdn45d2clw5un" path="res://assets/sprites/objects/boson.png" id="9_lp058"]
 [ext_resource type="Texture2D" uid="uid://dcetdmah4250n" path="res://assets/sprites/objects/fermion.png" id="10_24j03"]
 [ext_resource type="Texture2D" uid="uid://muctjcc86yh4" path="res://assets/sprites/objects/iron.png" id="12_p1ia5"]
+[ext_resource type="Texture2D" uid="uid://dfkdsvqm1dv3u" path="res://assets/sprites/objects/starter-extractor.png" id="13_4rjby"]
+[ext_resource type="Script" uid="uid://cb3c16qgwq376" path="res://src/scripts/extractor-ui.gd" id="14_ccybt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5dlwx"]
 texture = ExtResource("3_32aa5")
@@ -126,6 +128,42 @@ texture = ExtResource("7_5lsyw")
 [sub_resource type="TileSet" id="TileSet_lp058"]
 sources/0 = SubResource("TileSetAtlasSource_kokaf")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_50ugh"]
+atlas = ExtResource("13_4rjby")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcp4o"]
+atlas = ExtResource("13_4rjby")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yk6rd"]
+atlas = ExtResource("13_4rjby")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_htxff"]
+atlas = ExtResource("13_4rjby")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v252j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50ugh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lcp4o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yk6rd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_htxff")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Main" type="Node2D" unique_id=1975737646]
 script = ExtResource("1_o81g6")
 
@@ -146,9 +184,10 @@ tile_set = SubResource("TileSet_lp058")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1659415920]
 
 [node name="Bosons" type="Label" parent="CanvasLayer" unique_id=1989675490]
-offset_top = 45.0
-offset_right = 1104.0
-offset_bottom = 94.0
+offset_left = -15.0
+offset_top = 60.0
+offset_right = 1089.0
+offset_bottom = 109.0
 theme_override_fonts/font = ExtResource("7_2lg1k")
 theme_override_font_sizes/font_size = 32
 text = "0"
@@ -156,9 +195,10 @@ horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="Fermions" type="Label" parent="CanvasLayer" unique_id=762150349]
-offset_top = 88.0
-offset_right = 1104.0
-offset_bottom = 137.0
+offset_left = -15.0
+offset_top = 103.0
+offset_right = 1089.0
+offset_bottom = 152.0
 theme_override_fonts/font = ExtResource("7_2lg1k")
 theme_override_font_sizes/font_size = 32
 text = "0"
@@ -166,22 +206,24 @@ horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="BosonIcon" type="TextureRect" parent="CanvasLayer" unique_id=668095864]
-offset_left = 1107.0
-offset_top = 44.0
-offset_right = 1152.0
-offset_bottom = 84.0
+offset_left = 1092.0
+offset_top = 59.0
+offset_right = 1137.0
+offset_bottom = 99.0
 texture = ExtResource("9_lp058")
 
 [node name="FermionIcon" type="TextureRect" parent="CanvasLayer" unique_id=473797638]
-offset_left = 1104.0
-offset_top = 91.0
-offset_right = 1149.0
-offset_bottom = 131.0
+offset_left = 1089.0
+offset_top = 106.0
+offset_right = 1134.0
+offset_bottom = 146.0
 texture = ExtResource("10_24j03")
 
 [node name="Iron" type="Label" parent="CanvasLayer" unique_id=12751868]
-offset_right = 1104.0
-offset_bottom = 49.0
+offset_left = -15.0
+offset_top = 15.0
+offset_right = 1089.0
+offset_bottom = 64.0
 theme_override_fonts/font = ExtResource("7_2lg1k")
 theme_override_font_sizes/font_size = 32
 text = "0"
@@ -189,7 +231,27 @@ horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="IronIcon" type="TextureRect" parent="CanvasLayer" unique_id=627426193]
-offset_left = 1107.0
-offset_right = 1152.0
-offset_bottom = 40.0
+offset_left = 1092.0
+offset_top = 15.0
+offset_right = 1137.0
+offset_bottom = 55.0
 texture = ExtResource("12_p1ia5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=474772060]
+position = Vector2(1104.5, 600.50006)
+scale = Vector2(4.437494, 4.437494)
+sprite_frames = SubResource("SpriteFrames_v252j")
+frame = 2
+frame_progress = 0.7461225
+script = ExtResource("14_ccybt")
+
+[node name="ItemsNeeded" type="RichTextLabel" parent="CanvasLayer" unique_id=603247352]
+offset_left = 778.0
+offset_top = 566.0
+offset_right = 1062.0
+offset_bottom = 632.0
+theme_override_fonts/normal_font = ExtResource("7_2lg1k")
+theme_override_font_sizes/normal_font_size = 32
+text = "iron: 0/5"
+horizontal_alignment = 2
+vertical_alignment = 1

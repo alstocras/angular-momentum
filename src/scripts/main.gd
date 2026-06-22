@@ -5,6 +5,8 @@ var activeCell;
 var lookrange := 40
 @onready var tMap = $Buildings;
 @onready var terrain = $Terrain;
+
+@onready var neededDisplay = $CanvasLayer/ItemsNeeded;
 var extractorCost: float = 5;
 
 @onready var bosonLabel = $CanvasLayer/Bosons;
@@ -17,6 +19,8 @@ var fermionSpins: Array = [0.5, 1.5]
 
 @onready var ironLabel = $CanvasLayer/Iron;
 var ironCount: float;
+
+
 
 func _process(delta: float) -> void:
 	mousePos = tMap.get_local_mouse_position();
@@ -37,7 +41,10 @@ func _process(delta: float) -> void:
 	fermionLabel.text = str(round(fermionCount))
 	
 	if Input.is_action_pressed("removeObj"):
+		if tMap.get_cell_source_id(activeCell) == 1:
+			ironCount += extractorCost;
 		tMap.erase_cell(activeCell)
+		
 		
 	if Input.is_action_pressed("placeObj"):
 			if ironCount >= extractorCost:
@@ -55,4 +62,5 @@ func _process(delta: float) -> void:
 	if Input.is_action_pressed("mineIron") and terrain.get_cell_source_id(activeCell) == 3:
 		ironCount += 0.01;
 	ironLabel.text = str(round(ironCount));
+	neededDisplay.text = str(round(ironCount)) + "/" + str(round(extractorCost));
 	
