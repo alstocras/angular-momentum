@@ -6,8 +6,8 @@ var lookrange := 40
 @onready var tMap = $Buildings;
 @onready var terrain = $Terrain;
 
-@onready var neededDisplay = $CanvasLayer/ItemsNeeded;
-var extractorCost: float = 5;
+var extractorCost: float = 20;
+@onready var warner = $CanvasLayer/Warner
 
 @onready var bosonLabel = $CanvasLayer/Bosons;
 var bosonCount: float;
@@ -20,7 +20,8 @@ var fermionSpins: Array = [0.5, 1.5]
 @onready var ironLabel = $CanvasLayer/Iron;
 var ironCount: float;
 
-
+func _ready() -> void:
+	warner.hide();
 
 func _process(delta: float) -> void:
 	mousePos = tMap.get_local_mouse_position();
@@ -52,7 +53,9 @@ func _process(delta: float) -> void:
 					tMap.set_cell(activeCell, 0, Vector2i(0, 0), 1);
 					ironCount -= extractorCost;
 			else:
-				pass
+				warner.show();
+				await get_tree().create_timer(1).timeout;
+				warner.hide();
 		
 	for x in range(-lookrange, lookrange):
 		for y in range(-lookrange, lookrange):
@@ -60,7 +63,6 @@ func _process(delta: float) -> void:
 				ironCount += 0.1;
 				
 	if Input.is_action_pressed("mineIron") and terrain.get_cell_source_id(activeCell) == 3:
-		ironCount += 0.01;
+		ironCount += 0.1;
 	ironLabel.text = str(round(ironCount));
-	neededDisplay.text = str(round(ironCount)) + "/" + str(round(extractorCost));
 	
