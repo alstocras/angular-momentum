@@ -146,10 +146,10 @@ tile_set = SubResource("TileSet_lp058")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1659415920]
 
 [node name="Bosons" type="Label" parent="CanvasLayer" unique_id=1989675490]
-offset_left = -4.0
-offset_top = 6.0
-offset_right = 1100.0
-offset_bottom = 55.0
+offset_left = -15.0
+offset_top = 60.0
+offset_right = 1089.0
+offset_bottom = 109.0
 theme_override_fonts/font = ExtResource("7_2lg1k")
 theme_override_font_sizes/font_size = 32
 text = "0"
@@ -157,10 +157,10 @@ horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="Fermions" type="Label" parent="CanvasLayer" unique_id=762150349]
-offset_left = -5.0
-offset_top = 48.0
-offset_right = 1099.0
-offset_bottom = 97.0
+offset_left = -15.0
+offset_top = 103.0
+offset_right = 1089.0
+offset_bottom = 152.0
 theme_override_fonts/font = ExtResource("7_2lg1k")
 theme_override_font_sizes/font_size = 32
 text = "0"
@@ -168,24 +168,24 @@ horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="BosonIcon" type="TextureRect" parent="CanvasLayer" unique_id=668095864]
-offset_left = 1105.0
-offset_top = 3.0
-offset_right = 1150.0
-offset_bottom = 43.0
+offset_left = 1092.0
+offset_top = 59.0
+offset_right = 1137.0
+offset_bottom = 99.0
 texture = ExtResource("9_lp058")
 
 [node name="FermionIcon" type="TextureRect" parent="CanvasLayer" unique_id=473797638]
-offset_left = 1104.0
-offset_top = 45.0
-offset_right = 1149.0
-offset_bottom = 85.0
+offset_left = 1089.0
+offset_top = 106.0
+offset_right = 1134.0
+offset_bottom = 146.0
 texture = ExtResource("10_24j03")
 
 [node name="Iron" type="Label" parent="CanvasLayer" unique_id=12751868]
-offset_left = -5.0
-offset_top = 88.0
-offset_right = 1099.0
-offset_bottom = 137.0
+offset_left = -15.0
+offset_top = 15.0
+offset_right = 1089.0
+offset_bottom = 64.0
 theme_override_fonts/font = ExtResource("7_2lg1k")
 theme_override_font_sizes/font_size = 32
 text = "0"
@@ -193,8 +193,18 @@ horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="IronIcon" type="TextureRect" parent="CanvasLayer" unique_id=627426193]
-offset_left = 1104.0
-offset_top = 88.0
-offset_right = 1149.0
-offset_bottom = 128.0
+offset_left = 1092.0
+offset_top = 15.0
+offset_right = 1137.0
+offset_bottom = 55.0
 texture = ExtResource("12_p1ia5")
+
+[node name="Warner" type="Label" parent="CanvasLayer" unique_id=2041369554]
+offset_top = 577.0
+offset_right = 1168.9642
+offset_bottom = 648.0
+theme_override_colors/font_color = Color(0.94509804, 0.32941177, 0.32941177, 1)
+theme_override_fonts/font = ExtResource("7_2lg1k")
+theme_override_font_sizes/font_size = 32
+text = "Not enough iron to build extractor (you need 20)"
+vertical_alignment = 1
