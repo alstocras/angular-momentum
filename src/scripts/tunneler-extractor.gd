@@ -21,11 +21,10 @@ func _physics_process(delta: float) -> void:
 			Global.totalFermions += (5 * spin);
 		elif terrain.get_cell_source_id(oreBelowMe) == 3 and tMap.get_cell_source_id(oreBelowMe) == 0:
 			Global.totalIron += 5;
-	else:
-		$AnimatedSprite2D.stop();
-		
 		Global.energyAvailable -= 2;
 		Global.totalFermions -= 5
+		
+		
 		canExtract = false
 		await get_tree().create_timer(1.0).timeout
 		canExtract = true
