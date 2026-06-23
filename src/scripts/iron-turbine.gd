@@ -12,9 +12,9 @@ func _physics_process(delta: float) -> void:
 				$AnimatedSprite2D.play("generate");
 				Global.totalIron -= 10
 				Global.energyProduced += 1;
+				Global.energyAvailable += 1;
 				canGenerate = false
 				await get_tree().create_timer(5).timeout
 				$AnimatedSprite2D.stop()
-				Global.energyProduced -= 1;
 				canGenerate = true
 					

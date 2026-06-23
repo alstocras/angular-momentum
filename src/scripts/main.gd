@@ -76,7 +76,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_pressed("mineIron") and terrain.get_cell_source_id(activeCell) == 3:
 		ironCount += 0.1;
 	ironLabel.text = str(int(ironCount));
-	energyLabel.text = str(Global.energyProduced) + " eV";
+	energyLabel.text = str(Global.energyAvailable) + " eV";
 	Global.totalIron = ironCount;
 	Global.totalFermions = fermionCount;
 	Global.totalBosons = bosonCount;

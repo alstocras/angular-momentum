@@ -8,3 +8,4 @@ var energyProduced: float;
 var lookRange: float = 40;
 var terrainMap: TileMapLayer;
 var buildingMap: TileMapLayer;
+var energyAvailable: float;
