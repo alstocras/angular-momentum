@@ -331,3 +331,10 @@ theme_override_fonts/font = ExtResource("7_2lg1k")
 theme_override_font_sizes/font_size = 17
 text = "place boson turbine (build cost 40 bosons): y"
 vertical_alignment = 1
+
+[node name="FermionTurbine" type="Label" parent="CanvasLayer/HelpMenu/ScrollContainer/VBoxContainer" unique_id=996476584]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_2lg1k")
+theme_override_font_sizes/font_size = 17
+text = "place fermion turbine (build cost 40 fermions): f"
+vertical_alignment = 1

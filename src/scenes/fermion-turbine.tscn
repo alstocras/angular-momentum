@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://da4aj863memdg"]
 
+[ext_resource type="Script" uid="uid://br8h2t8bfpick" path="res://src/scripts/fermion-turbine.gd" id="1_rjoud"]
 [ext_resource type="Texture2D" uid="uid://c7uov8432fhay" path="res://assets/sprites/objects/fermion-turbine-generate.png" id="1_ttxnf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oud7o"]
@@ -29,6 +30,7 @@ animations = [{
 
 [node name="FermionTurbine" type="RigidBody2D" unique_id=976035976]
 freeze = true
+script = ExtResource("1_rjoud")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=252944392]
 shape = SubResource("RectangleShape2D_oud7o")
@@ -36,4 +38,4 @@ shape = SubResource("RectangleShape2D_oud7o")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1029575113]
 sprite_frames = SubResource("SpriteFrames_yqhgb")
 animation = &"generate"
-frame_progress = 0.734688
+frame_progress = 0.47231907
