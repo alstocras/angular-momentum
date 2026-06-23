@@ -10,6 +10,7 @@ var extractorCost: float = 20;
 
 var ironTurbineCost: float = 40;
 var electricExtractorCost: float = 20;
+var bosonTurbineCost: float = 40;
 
 @onready var bosonLabel = $CanvasLayer/Bosons;
 var bosonCount: float;
@@ -54,8 +55,6 @@ func _process(delta: float) -> void:
 	fermionLabel.text = str(int(fermionCount))
 	
 	if Input.is_action_pressed("removeObj"):
-		if tMap.get_cell_source_id(activeCell) == 1:
-			ironCount += extractorCost;
 		tMap.erase_cell(activeCell)
 		
 		
@@ -74,6 +73,10 @@ func _process(delta: float) -> void:
 			tMap.set_cell(activeCell, 0, Vector2i(0, 0), 3);
 			bosonCount -= electricExtractorCost
 				
+	if Input.is_action_pressed("placeBosonTurbine"):
+		if bosonCount >= bosonTurbineCost:
+				tMap.set_cell(activeCell, 1, Vector2i(0, 0), 4);
+				bosonCount -= bosonTurbineCost;
 				
 	if Input.is_action_pressed("mineIron") and terrain.get_cell_source_id(activeCell) == 3:
 		ironCount += 0.1;
