@@ -264,7 +264,7 @@ vertical_alignment = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("7_2lg1k")
 theme_override_font_sizes/font_size = 17
-text = "help menu (this): ?"
+text = "help menu (this): ? (shift + /)"
 vertical_alignment = 1
 
 [node name="Move" type="Label" parent="CanvasLayer/HelpMenu/ScrollContainer/VBoxContainer" unique_id=701983152]
