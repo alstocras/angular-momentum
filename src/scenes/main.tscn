@@ -320,5 +320,5 @@ vertical_alignment = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("7_2lg1k")
 theme_override_font_sizes/font_size = 17
-text = "zoom in/out: scroll wheel"
+text = "zoom in/out: ctrl + scroll wheel"
 vertical_alignment = 1
