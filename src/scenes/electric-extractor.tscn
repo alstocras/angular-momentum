@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://q3m18jsnjb4s"]
+
+[ext_resource type="Texture2D" uid="uid://d3decbaa05gx3" path="res://assets/sprites/objects/electric-extractor.png" id="1_5lifi"]
+[ext_resource type="Script" uid="uid://cj0iyxp7g4fo0" path="res://src/scripts/electric-extractor.gd" id="1_v8qlh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rcgfy"]
+size = Vector2(16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8qlh"]
+atlas = ExtResource("1_5lifi")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_im0bi"]
+atlas = ExtResource("1_5lifi")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_khcrm"]
+atlas = ExtResource("1_5lifi")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmeow"]
+atlas = ExtResource("1_5lifi")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xh1qf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8qlh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_im0bi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_khcrm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmeow")
+}],
+"loop": true,
+"name": &"extract",
+"speed": 10.0
+}]
+
+[node name="ElectricExtractor" type="RigidBody2D" unique_id=1434927460]
+freeze = true
+script = ExtResource("1_v8qlh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=236847849]
+shape = SubResource("RectangleShape2D_rcgfy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=334604732]
+sprite_frames = SubResource("SpriteFrames_xh1qf")
+animation = &"extract"
+frame_progress = 0.94638366
