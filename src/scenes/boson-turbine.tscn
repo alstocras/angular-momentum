@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dw2q2rfdqbf81"]
+
+[ext_resource type="Texture2D" uid="uid://caps0px468hwd" path="res://assets/sprites/objects/boson-turbine-generate.png" id="1_3yhq5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqyna"]
+atlas = ExtResource("1_3yhq5")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_32wbc"]
+atlas = ExtResource("1_3yhq5")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tw7ly"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yqyna")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_32wbc")
+}],
+"loop": true,
+"name": &"generate",
+"speed": 15.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n7xee"]
+size = Vector2(16, 16)
+
+[node name="BosonTurbine" type="RigidBody2D" unique_id=1685646031]
+freeze = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=656518044]
+sprite_frames = SubResource("SpriteFrames_tw7ly")
+animation = &"generate"
+frame_progress = 0.50984234
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1448620184]
+shape = SubResource("RectangleShape2D_n7xee")
