@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://q3m18jsnjb4s" path="res://src/scenes/electric-extractor.tscn" id="7_4rjby"]
 [ext_resource type="Texture2D" uid="uid://bixnpjfwdwxlq" path="res://assets/sprites/terrain/wall.png" id="7_5lsyw"]
 [ext_resource type="PackedScene" uid="uid://465rpd5qly35" path="res://src/scenes/iron-turbine.tscn" id="7_kbdt0"]
+[ext_resource type="PackedScene" uid="uid://dw2q2rfdqbf81" path="res://src/scenes/boson-turbine.tscn" id="9_ccybt"]
 [ext_resource type="Texture2D" uid="uid://bdn45d2clw5un" path="res://assets/sprites/objects/boson.png" id="9_lp058"]
 [ext_resource type="Texture2D" uid="uid://dcetdmah4250n" path="res://assets/sprites/objects/fermion.png" id="10_24j03"]
 [ext_resource type="Texture2D" uid="uid://muctjcc86yh4" path="res://assets/sprites/objects/iron.png" id="12_p1ia5"]
@@ -107,6 +108,7 @@ scenes/3/scene = ExtResource("7_4rjby")
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_4rjby"]
 resource_name = "generators"
 scenes/2/scene = ExtResource("7_kbdt0")
+scenes/4/scene = ExtResource("9_ccybt")
 
 [sub_resource type="TileSet" id="TileSet_dbro3"]
 sources/0 = SubResource("TileSetScenesCollectionSource_o81g6")
@@ -143,6 +145,7 @@ tile_set = SubResource("TileSet_rr2wm")
 
 [node name="Buildings" type="TileMapLayer" parent="." unique_id=100560682]
 z_index = 1
+tile_map_data = PackedByteArray("AAD+/wEAAQAAAAAABAA=")
 tile_set = SubResource("TileSet_dbro3")
 
 [node name="Player" parent="." unique_id=2103953406 instance=ExtResource("2_32aa5")]
@@ -292,21 +295,21 @@ vertical_alignment = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("7_2lg1k")
 theme_override_font_sizes/font_size = 17
-text = "place basic extractor (20 iron, 0.1 * spin ore/s): left-click"
+text = "place basic extractor (build cost 20 iron): left-click"
 vertical_alignment = 1
 
 [node name="ElectricExtractor" type="Label" parent="CanvasLayer/HelpMenu/ScrollContainer/VBoxContainer" unique_id=636194453]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("7_2lg1k")
 theme_override_font_sizes/font_size = 17
-text = "place electric extractor (20 bosons, 1 * spin ore/s): r"
+text = "place electric extractor (build cost 20 bosons): r"
 vertical_alignment = 1
 
 [node name="IronTurbine" type="Label" parent="CanvasLayer/HelpMenu/ScrollContainer/VBoxContainer" unique_id=990807589]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("7_2lg1k")
 theme_override_font_sizes/font_size = 17
-text = "place iron turbine (40 iron, 0.5 eV/s): t"
+text = "place iron turbine (build cost 40 iron): t"
 vertical_alignment = 1
 
 [node name="Mine" type="Label" parent="CanvasLayer/HelpMenu/ScrollContainer/VBoxContainer" unique_id=188169890]
@@ -320,5 +323,12 @@ vertical_alignment = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("7_2lg1k")
 theme_override_font_sizes/font_size = 17
-text = "zoom in/out: ctrl + scroll wheel"
+text = "zoom in/out: scroll wheel"
+vertical_alignment = 1
+
+[node name="BosonTurbine" type="Label" parent="CanvasLayer/HelpMenu/ScrollContainer/VBoxContainer" unique_id=656794348]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_2lg1k")
+theme_override_font_sizes/font_size = 17
+text = "place boson turbine (build cost 40 bosons): y"
 vertical_alignment = 1

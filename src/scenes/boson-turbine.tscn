@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://dw2q2rfdqbf81"]
 
 [ext_resource type="Texture2D" uid="uid://caps0px468hwd" path="res://assets/sprites/objects/boson-turbine-generate.png" id="1_3yhq5"]
+[ext_resource type="Script" uid="uid://bh7oqav04seh3" path="res://src/scripts/boson-turbine.gd" id="1_yqyna"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n7xee"]
+size = Vector2(16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yqyna"]
 atlas = ExtResource("1_3yhq5")
@@ -24,16 +28,14 @@ animations = [{
 "speed": 15.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n7xee"]
-size = Vector2(16, 16)
-
 [node name="BosonTurbine" type="RigidBody2D" unique_id=1685646031]
 freeze = true
+script = ExtResource("1_yqyna")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1448620184]
+shape = SubResource("RectangleShape2D_n7xee")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=656518044]
 sprite_frames = SubResource("SpriteFrames_tw7ly")
 animation = &"generate"
-frame_progress = 0.50984234
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1448620184]
-shape = SubResource("RectangleShape2D_n7xee")
+frame_progress = 0.2501213
