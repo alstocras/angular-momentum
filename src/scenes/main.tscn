@@ -153,9 +153,9 @@ tile_set = SubResource("TileSet_lp058")
 
 [node name="Bosons" type="Label" parent="CanvasLayer" unique_id=1989675490]
 offset_left = -15.0
-offset_top = 60.0
+offset_top = 64.0
 offset_right = 1089.0
-offset_bottom = 109.0
+offset_bottom = 113.0
 theme_override_fonts/font = ExtResource("7_2lg1k")
 theme_override_font_sizes/font_size = 32
 text = "0"
@@ -164,9 +164,9 @@ vertical_alignment = 1
 
 [node name="Fermions" type="Label" parent="CanvasLayer" unique_id=762150349]
 offset_left = -15.0
-offset_top = 103.0
+offset_top = 111.0
 offset_right = 1089.0
-offset_bottom = 152.0
+offset_bottom = 160.0
 theme_override_fonts/font = ExtResource("7_2lg1k")
 theme_override_font_sizes/font_size = 32
 text = "0"
@@ -189,9 +189,9 @@ texture = ExtResource("10_24j03")
 
 [node name="Iron" type="Label" parent="CanvasLayer" unique_id=12751868]
 offset_left = -15.0
-offset_top = 15.0
+offset_top = 20.0
 offset_right = 1089.0
-offset_bottom = 64.0
+offset_bottom = 69.0
 theme_override_fonts/font = ExtResource("7_2lg1k")
 theme_override_font_sizes/font_size = 32
 text = "0"
@@ -213,4 +213,15 @@ theme_override_colors/font_color = Color(0.94509804, 0.32941177, 0.32941177, 1)
 theme_override_fonts/font = ExtResource("7_2lg1k")
 theme_override_font_sizes/font_size = 32
 text = "Not enough iron to build extractor (20)"
+vertical_alignment = 1
+
+[node name="Energy" type="Label" parent="CanvasLayer" unique_id=1462551571]
+offset_left = -15.0
+offset_top = 154.0
+offset_right = 1146.0
+offset_bottom = 203.0
+theme_override_fonts/font = ExtResource("7_2lg1k")
+theme_override_font_sizes/font_size = 32
+text = "0 eV"
+horizontal_alignment = 2
 vertical_alignment = 1

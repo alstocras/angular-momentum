@@ -1,4 +1,5 @@
 extends RigidBody2D;
+var canGenerate: bool;
 
 func _physics_process(delta: float) -> void:
 	var lookRange = Global.lookRange;
@@ -10,6 +11,10 @@ func _physics_process(delta: float) -> void:
 			if not $AnimatedSprite2D.is_playing():
 				$AnimatedSprite2D.play("generate");
 				Global.totalIron -= 10
-				await get_tree().create_timer(5).timeout;
-				$AnimatedSprite2D.stop();
+				Global.energyProduced += 1;
+				canGenerate = false
+				await get_tree().create_timer(5).timeout
+				$AnimatedSprite2D.stop()
+				Global.energyProduced = 0;
+				canGenerate = true
 					

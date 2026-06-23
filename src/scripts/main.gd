@@ -21,6 +21,9 @@ var fermionSpins: Array = [0.5, 1.5]
 @onready var ironLabel = $CanvasLayer/Iron;
 var ironCount: float;
 
+@onready var energyLabel = $CanvasLayer/Energy
+var energyCount: float;
+
 func _ready() -> void:
 	warner.hide();
 
@@ -31,6 +34,7 @@ func _process(delta: float) -> void:
 	ironCount = Global.totalIron
 	bosonCount = Global.totalBosons
 	fermionCount = Global.totalFermions
+	energyCount = Global.energyProduced
 	mousePos = tMap.get_local_mouse_position();
 	activeCell = tMap.local_to_map(mousePos);
 	
@@ -67,9 +71,11 @@ func _process(delta: float) -> void:
 				
 	if Input.is_action_pressed("mineIron") and terrain.get_cell_source_id(activeCell) == 3:
 		ironCount += 0.1;
-	ironLabel.text = str((ironCount));
+	ironLabel.text = str(int(ironCount));
+	energyLabel.text = str(energyCount) + " eV";
 	Global.totalIron = ironCount;
 	Global.totalFermions = fermionCount;
 	Global.totalBosons = bosonCount;
+	Global.energyProduced = energyCount;
 	
 	
