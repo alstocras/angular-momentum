@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://q3m18jsnjb4s" path="res://src/scenes/electric-extractor.tscn" id="7_4rjby"]
 [ext_resource type="Texture2D" uid="uid://bixnpjfwdwxlq" path="res://assets/sprites/terrain/wall.png" id="7_5lsyw"]
 [ext_resource type="PackedScene" uid="uid://465rpd5qly35" path="res://src/scenes/iron-turbine.tscn" id="7_kbdt0"]
+[ext_resource type="PackedScene" uid="uid://bu55l2hk8w8qy" path="res://src/scenes/tunneler-extractor.tscn" id="8_lcp4o"]
 [ext_resource type="PackedScene" uid="uid://dw2q2rfdqbf81" path="res://src/scenes/boson-turbine.tscn" id="9_ccybt"]
 [ext_resource type="Texture2D" uid="uid://bdn45d2clw5un" path="res://assets/sprites/objects/boson.png" id="9_lp058"]
 [ext_resource type="Texture2D" uid="uid://dcetdmah4250n" path="res://assets/sprites/objects/fermion.png" id="10_24j03"]
@@ -105,6 +106,7 @@ sources/3 = SubResource("TileSetAtlasSource_kbdt0")
 resource_name = "extractors"
 scenes/1/scene = ExtResource("2_5dlwx")
 scenes/3/scene = ExtResource("7_4rjby")
+scenes/5/scene = ExtResource("8_lcp4o")
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_4rjby"]
 resource_name = "generators"
