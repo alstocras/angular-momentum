@@ -46,9 +46,6 @@ func _process(delta: float) -> void:
 			if terrain.get_cell_source_id(Vector2i(x, y)) == 2 and tMap.get_cell_source_id(Vector2i(x, y)) == 0:
 				var spin = bosonSpins.pick_random();
 				bosonCount += (0.1 * spin);
-			if terrain.get_cell_source_id(Vector2i(x, y)) == 1 and tMap.get_cell_source_id(Vector2i(x, y)) == 0:
-				var spin = fermionSpins.pick_random();
-				fermionCount += (0.1 * spin);
 			if terrain.get_cell_source_id(Vector2i(x, y)) == 3 and tMap.get_cell_source_id(Vector2i(x, y)) == 0:
 				ironCount += 0.1;
 				

@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://bu55l2hk8w8qy"]
+
+[ext_resource type="Script" uid="uid://chosxfjb8e17h" path="res://src/scripts/tunneler-extractor.gd" id="1_mvqkm"]
+[ext_resource type="Texture2D" uid="uid://cpihu18qhosja" path="res://assets/sprites/objects/tunneler-extractor.png" id="1_yjhj8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qdc65"]
+size = Vector2(16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mvqkm"]
+atlas = ExtResource("1_yjhj8")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wwr58"]
+atlas = ExtResource("1_yjhj8")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jmsx"]
+atlas = ExtResource("1_yjhj8")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03juf"]
+atlas = ExtResource("1_yjhj8")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ektxx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mvqkm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wwr58")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jmsx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03juf")
+}],
+"loop": true,
+"name": &"extract",
+"speed": 15.0
+}]
+
+[node name="TunnelerExtractor" type="RigidBody2D" unique_id=1970001501]
+freeze = true
+script = ExtResource("1_mvqkm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=483369493]
+shape = SubResource("RectangleShape2D_qdc65")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1647793466]
+sprite_frames = SubResource("SpriteFrames_ektxx")
+animation = &"extract"
+frame_progress = 0.1124805
