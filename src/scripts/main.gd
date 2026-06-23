@@ -9,6 +9,8 @@ var extractorCost: float = 20;
 @onready var warner = $CanvasLayer/Warner
 
 var electricExtractorCost: float = 20;
+var tunnelerExtractorCost: float = 20;
+
 var ironTurbineCost: float = 40;
 var bosonTurbineCost: float = 40;
 var fermionTurbineCost: float = 40;
@@ -65,6 +67,11 @@ func _process(delta: float) -> void:
 		if ironCount >= ironTurbineCost:
 				tMap.set_cell(activeCell, 1, Vector2i(0, 0), 2);
 				ironCount -= ironTurbineCost;
+	
+	if Input.is_action_pressed("placeTunnelerExtractor"):
+		if fermionCount >= tunnelerExtractorCost:
+				tMap.set_cell(activeCell, 0, Vector2i(0, 0), 5);
+				fermionCount -= tunnelerExtractorCost;
 				
 	if Input.is_action_pressed("placeElectricExtractor"):
 		if bosonCount >= electricExtractorCost:
