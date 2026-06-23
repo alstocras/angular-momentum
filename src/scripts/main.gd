@@ -8,9 +8,10 @@ var activeCell;
 var extractorCost: float = 20;
 @onready var warner = $CanvasLayer/Warner
 
-var ironTurbineCost: float = 40;
 var electricExtractorCost: float = 20;
+var ironTurbineCost: float = 40;
 var bosonTurbineCost: float = 40;
+var fermionTurbineCost: float = 40;
 
 @onready var bosonLabel = $CanvasLayer/Bosons;
 var bosonCount: float;
@@ -77,6 +78,11 @@ func _process(delta: float) -> void:
 		if bosonCount >= bosonTurbineCost:
 				tMap.set_cell(activeCell, 1, Vector2i(0, 0), 4);
 				bosonCount -= bosonTurbineCost;
+				
+	if Input.is_action_pressed("placeFermionTurbine"):
+		if fermionCount >= fermionTurbineCost:
+				tMap.set_cell(activeCell, 1, Vector2i(0, 0), 6);
+				fermionCount -= fermionTurbineCost;
 				
 	if Input.is_action_pressed("mineIron") and terrain.get_cell_source_id(activeCell) == 3:
 		ironCount += 0.1;
