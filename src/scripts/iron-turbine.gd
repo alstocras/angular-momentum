@@ -1,20 +1,20 @@
-extends RigidBody2D;
-var canGenerate: bool = true;
+extends RigidBody2D
+var generating: bool = false
+var costTimer: float = 5.0
 
 func _physics_process(delta: float) -> void:
-	var lookRange = Global.lookRange;
-	var terrain = Global.terrainMap;
-	var buildings = Global.buildingMap;
-	if Global.totalIron >= 10:
-		var myPos = buildings.local_to_map(global_position);
-		if buildings.get_cell_source_id(myPos) == 1:
-			if canGenerate and not $AnimatedSprite2D.is_playing():
-				$AnimatedSprite2D.play("generate");
+	var buildings = Global.buildingMap
+	if not generating:
+		if Global.totalIron >= 10:
+			var myPos = buildings.local_to_map(global_position)
+			if buildings.get_cell_source_id(myPos) == 1:
 				Global.totalIron -= 10
-				Global.energyProduced += 1;
-				Global.energyAvailable += 1;
-				canGenerate = false
-				await get_tree().create_timer(5).timeout
-				$AnimatedSprite2D.stop()
-				canGenerate = true
-					
+				generating = true
+				costTimer = 5.0
+				$AnimatedSprite2D.play("generate")
+	else:
+		Global.energyAvailable += 0.5 * delta
+		costTimer -= delta
+		if costTimer <= 0:
+			generating = false
+			$AnimatedSprite2D.stop()

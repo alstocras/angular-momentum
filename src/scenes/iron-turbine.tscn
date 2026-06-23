@@ -38,4 +38,5 @@ shape = SubResource("RectangleShape2D_n2wfo")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1370005713]
 sprite_frames = SubResource("SpriteFrames_tuhc2")
 animation = &"generate"
-frame_progress = 0.642711
+frame = 1
+frame_progress = 0.010881808
