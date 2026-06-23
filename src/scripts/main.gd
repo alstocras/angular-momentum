@@ -9,6 +9,7 @@ var extractorCost: float = 20;
 @onready var warner = $CanvasLayer/Warner
 
 var ironTurbineCost: float = 40;
+var electricExtractorCost: float = 40;
 
 @onready var bosonLabel = $CanvasLayer/Bosons;
 var bosonCount: float;
@@ -22,7 +23,6 @@ var fermionSpins: Array = [0.5, 1.5]
 var ironCount: float;
 
 @onready var energyLabel = $CanvasLayer/Energy
-var energyCount: float;
 
 func _ready() -> void:
 	warner.hide();
@@ -34,7 +34,6 @@ func _process(delta: float) -> void:
 	ironCount = Global.totalIron
 	bosonCount = Global.totalBosons
 	fermionCount = Global.totalFermions
-	energyCount = Global.energyProduced
 	mousePos = tMap.get_local_mouse_position();
 	activeCell = tMap.local_to_map(mousePos);
 	
@@ -68,14 +67,18 @@ func _process(delta: float) -> void:
 				tMap.set_cell(activeCell, 1, Vector2i(0, 0), 2);
 				ironCount -= ironTurbineCost;
 				
+	if Input.is_action_pressed("placeElectricExtractor"):
+		if bosonCount >= electricExtractorCost:
+			tMap.set_cell(activeCell, 0, Vector2i(0, 0), 3);
+			bosonCount -= electricExtractorCost
+				
 				
 	if Input.is_action_pressed("mineIron") and terrain.get_cell_source_id(activeCell) == 3:
 		ironCount += 0.1;
 	ironLabel.text = str(int(ironCount));
-	energyLabel.text = str(energyCount) + " eV";
+	energyLabel.text = str(Global.energyProduced) + " eV";
 	Global.totalIron = ironCount;
 	Global.totalFermions = fermionCount;
 	Global.totalBosons = bosonCount;
-	Global.energyProduced = energyCount;
 	
 	

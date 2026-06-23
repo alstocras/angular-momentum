@@ -39,7 +39,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"extract",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [node name="ElectricExtractor" type="RigidBody2D" unique_id=1434927460]
@@ -52,4 +52,4 @@ shape = SubResource("RectangleShape2D_rcgfy")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=334604732]
 sprite_frames = SubResource("SpriteFrames_xh1qf")
 animation = &"extract"
-frame_progress = 0.13937663
+frame_progress = 0.94638366
