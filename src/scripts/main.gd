@@ -26,7 +26,7 @@ var fermionSpins: Array = [0.5, 1.5]
 @onready var ironLabel = $CanvasLayer/Iron;
 var ironCount: float;
 
-@onready var sfx := $AudioStreamPlayer;
+@onready var sfx := $Place;
 @onready var remove := $Remove
 
 @onready var energyLabel = $CanvasLayer/Energy
