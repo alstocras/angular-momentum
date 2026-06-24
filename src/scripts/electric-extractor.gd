@@ -22,8 +22,6 @@ func _physics_process(delta: float) -> void:
 			Global.totalFermions += (1 * spin);
 		elif terrain.get_cell_source_id(oreBelowMe) == 3 and tMap.get_cell_source_id(oreBelowMe) == 0:
 			Global.totalIron += 1;
-	if not canExtract:
-		
 		Global.energyAvailable -= 2;
 		canExtract = false
 		await get_tree().create_timer(1.0).timeout
