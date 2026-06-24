@@ -5,13 +5,15 @@ extract bosons and fermions
 
 ### sound effects
 
-factory placement sound: Sound Effect by freesound_community from Pixabay 
+- factory placement sound: Sound Effect by freesound_community from Pixabay 
 
-factory destroy sound: Crumble #8.wav by abstraktgeneriert | License: Creative Commons 0
+- factory destroy sound: Crumble #8.wav by abstraktgeneriert | License: Creative Commons 0
+
+- mining/drilling sound: Drill press - Free run by ldezem | License: Creative Commons 0
 
 ### background music
 
-"Industrial Cinematic" Kevin MacLeod (incompetech.com)
+- "Industrial Cinematic" Kevin MacLeod (incompetech.com)
 Licensed under Creative Commons: By Attribution 4.0 License
 <http://creativecommons.org/licenses/by/4.0/>
 
