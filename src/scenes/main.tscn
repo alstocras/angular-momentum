@@ -519,6 +519,123 @@ theme_override_font_sizes/font_size = 17
 text = "3.3. consumes: 3 eV/s, 5 fermions/frame"
 vertical_alignment = 1
 
+[node name="Spacer3" type="Label" parent="CanvasLayer/Guidebook/ScrollContainer/VBoxContainer" unique_id=1927908886]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("7_2lg1k")
+theme_override_font_sizes/font_size = 17
+vertical_alignment = 1
+
+[node name="IT" type="Label" parent="CanvasLayer/Guidebook/ScrollContainer/VBoxContainer" unique_id=970579974]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("7_2lg1k")
+theme_override_font_sizes/font_size = 17
+text = "4. iron turbine"
+vertical_alignment = 1
+
+[node name="ITCost" type="Label" parent="CanvasLayer/Guidebook/ScrollContainer/VBoxContainer" unique_id=1167916966]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("7_2lg1k")
+theme_override_font_sizes/font_size = 17
+text = "4.1. build cost: 40 iron"
+vertical_alignment = 1
+
+[node name="ITOut" type="Label" parent="CanvasLayer/Guidebook/ScrollContainer/VBoxContainer" unique_id=352656795]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("7_2lg1k")
+theme_override_font_sizes/font_size = 17
+text = "4.2. produces 0.5 eV/frame"
+vertical_alignment = 1
+
+[node name="ITIn" type="Label" parent="CanvasLayer/Guidebook/ScrollContainer/VBoxContainer" unique_id=903929703]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("7_2lg1k")
+theme_override_font_sizes/font_size = 17
+text = "4.3. consumes: 5 iron/s"
+vertical_alignment = 1
+
+[node name="Spacer4" type="Label" parent="CanvasLayer/Guidebook/ScrollContainer/VBoxContainer" unique_id=1427905506]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("7_2lg1k")
+theme_override_font_sizes/font_size = 17
+vertical_alignment = 1
+
+[node name="BT" type="Label" parent="CanvasLayer/Guidebook/ScrollContainer/VBoxContainer" unique_id=1957002613]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("7_2lg1k")
+theme_override_font_sizes/font_size = 17
+text = "5. boson turbine"
+vertical_alignment = 1
+
+[node name="BTCost" type="Label" parent="CanvasLayer/Guidebook/ScrollContainer/VBoxContainer" unique_id=337844443]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("7_2lg1k")
+theme_override_font_sizes/font_size = 17
+text = "5.1. build cost: 40 bosons"
+vertical_alignment = 1
+
+[node name="BTOut" type="Label" parent="CanvasLayer/Guidebook/ScrollContainer/VBoxContainer" unique_id=930362507]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("7_2lg1k")
+theme_override_font_sizes/font_size = 17
+text = "5.2. produces spin eV/frame"
+vertical_alignment = 1
+
+[node name="BTIn" type="Label" parent="CanvasLayer/Guidebook/ScrollContainer/VBoxContainer" unique_id=743024310]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("7_2lg1k")
+theme_override_font_sizes/font_size = 17
+text = "5.3. consumes: 5 bosons/s"
+vertical_alignment = 1
+
+[node name="Spacer5" type="Label" parent="CanvasLayer/Guidebook/ScrollContainer/VBoxContainer" unique_id=345481912]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("7_2lg1k")
+theme_override_font_sizes/font_size = 17
+vertical_alignment = 1
+
+[node name="FT" type="Label" parent="CanvasLayer/Guidebook/ScrollContainer/VBoxContainer" unique_id=1808793644]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("7_2lg1k")
+theme_override_font_sizes/font_size = 17
+text = "6. fermion turbine"
+vertical_alignment = 1
+
+[node name="FTC" type="Label" parent="CanvasLayer/Guidebook/ScrollContainer/VBoxContainer" unique_id=211925600]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("7_2lg1k")
+theme_override_font_sizes/font_size = 17
+text = "6.1. build cost: 40 fermions"
+vertical_alignment = 1
+
+[node name="FTO" type="Label" parent="CanvasLayer/Guidebook/ScrollContainer/VBoxContainer" unique_id=702785229]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("7_2lg1k")
+theme_override_font_sizes/font_size = 17
+text = "6.2. produces 5spin eV/frame"
+vertical_alignment = 1
+
+[node name="FTI" type="Label" parent="CanvasLayer/Guidebook/ScrollContainer/VBoxContainer" unique_id=1234814209]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("7_2lg1k")
+theme_override_font_sizes/font_size = 17
+text = "6.3. consumes: 5 fermions/s"
+vertical_alignment = 1
+
 [node name="Place" type="AudioStreamPlayer" parent="." unique_id=658205685]
 stream = ExtResource("18_yk6rd")
 volume_db = -10.0
