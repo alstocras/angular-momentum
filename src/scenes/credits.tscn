@@ -58,7 +58,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
 theme_override_fonts/font = ExtResource("1_vfw02")
 theme_override_font_sizes/font_size = 28
-text = "menu music and playtesting: arachnent (github: nitroqwert)"
+text = "playtesting and feedback: arachnent (github: nitroqwert)"
 vertical_alignment = 1
 
 [node name="Shaboy" type="Label" parent="VBoxContainer" unique_id=285091519]
@@ -96,7 +96,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
 theme_override_fonts/font = ExtResource("1_vfw02")
 theme_override_font_sizes/font_size = 28
-text = "the gameplay and credits music isnt ours though:"
+text = "the music isnt ours though:"
 vertical_alignment = 1
 
 [node name="Spacer5" type="Label" parent="VBoxContainer" unique_id=1690575794]
@@ -111,7 +111,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
 theme_override_fonts/font = ExtResource("1_vfw02")
 theme_override_font_sizes/font_size = 28
-text = "\"Industrial Cinematic\", \"Crusade - Heavy Industry\""
+text = "\"Industrial Cinematic\", \"Crusade - Heavy Industry\", \"The Descent\""
 vertical_alignment = 1
 
 [node name="ExternalHelp3" type="Label" parent="VBoxContainer" unique_id=901800916]
@@ -212,6 +212,21 @@ theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
 theme_override_fonts/font = ExtResource("1_vfw02")
 theme_override_font_sizes/font_size = 28
 text = "this is, in no way, scientfically accurate. "
+vertical_alignment = 1
+
+[node name="Spacer12" type="Label" parent="VBoxContainer" unique_id=1364468311]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("1_vfw02")
+theme_override_font_sizes/font_size = 28
+vertical_alignment = 1
+
+[node name="Help" type="Label" parent="VBoxContainer" unique_id=302409401]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("1_vfw02")
+theme_override_font_sizes/font_size = 28
+text = "you can now press escape to return to the main menu."
 vertical_alignment = 1
 
 [node name="Spacer8" type="Label" parent="VBoxContainer" unique_id=2146868572]

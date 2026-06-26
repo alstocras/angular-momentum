@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bj1cqu5vwwwjj" path="res://src/scripts/main-menu.gd" id="1_fqmgj"]
 [ext_resource type="FontFile" uid="uid://6n3i0td75b8m" path="res://assets/fonts/jbmono.ttf" id="2_hsqdw"]
-[ext_resource type="AudioStream" uid="uid://b3pejieq6lx3y" path="res://assets/audio/music/menu.wav" id="7_58x6t"]
+[ext_resource type="AudioStream" uid="uid://dibflcgns7i1u" path="res://assets/audio/music/the-descent-kevin-macleod.mp3" id="3_hsqdw"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0vgna"]
 
@@ -56,7 +56,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_0vgna")
 text = "quit"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=215328421]
-stream = ExtResource("7_58x6t")
+stream = ExtResource("3_hsqdw")
 volume_db = -5.0
 autoplay = true
 
