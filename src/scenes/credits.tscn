@@ -2,6 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://6n3i0td75b8m" path="res://assets/fonts/jbmono.ttf" id="1_vfw02"]
 [ext_resource type="Script" uid="uid://bhi4ne4mb6xpv" path="res://src/scripts/credits.gd" id="1_y1npw"]
+[ext_resource type="AudioStream" uid="uid://beq0bojqriyyp" path="res://assets/audio/music/crusade-heavy-industry-kevin-macleod.mp3" id="3_pi7e3"]
 
 [node name="Credits" type="Node2D" unique_id=836274544]
 script = ExtResource("1_y1npw")
@@ -27,7 +28,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
 theme_override_fonts/font = ExtResource("1_vfw02")
 theme_override_font_sizes/font_size = 28
-text = "you had 0 iron, 0 bosons, 0 fermions, and a total of 0 eV"
+text = "0 iron, 0 bosons, 0 fermions"
 vertical_alignment = 1
 
 [node name="Spacer" type="Label" parent="VBoxContainer" unique_id=1097833570]
@@ -182,6 +183,29 @@ theme_override_fonts/font = ExtResource("1_vfw02")
 theme_override_font_sizes/font_size = 28
 vertical_alignment = 1
 
+[node name="Godot" type="Label" parent="VBoxContainer" unique_id=1461650531]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("1_vfw02")
+theme_override_font_sizes/font_size = 28
+text = "this game uses the godot engine, which is licensed separately:"
+vertical_alignment = 1
+
+[node name="Godot2" type="Label" parent="VBoxContainer" unique_id=2052903855]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("1_vfw02")
+theme_override_font_sizes/font_size = 28
+text = "godotengine.org/license; the mit license."
+vertical_alignment = 1
+
+[node name="Spacer11" type="Label" parent="VBoxContainer" unique_id=842023666]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("1_vfw02")
+theme_override_font_sizes/font_size = 28
+vertical_alignment = 1
+
 [node name="Disclaimer" type="Label" parent="VBoxContainer" unique_id=1216019252]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
@@ -211,3 +235,8 @@ theme_override_fonts/font = ExtResource("1_vfw02")
 theme_override_font_sizes/font_size = 28
 text = "thank you for playing angular momentum."
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=184681810]
+stream = ExtResource("3_pi7e3")
+volume_db = -5.0
+autoplay = true
