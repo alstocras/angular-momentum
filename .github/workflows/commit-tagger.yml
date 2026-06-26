@@ -124,9 +124,9 @@ jobs:
       - name: Setup butler
         run: |
           curl -L -o butler.zip https://github.com/itchio/butler/releases/latest/download/butler-linux-amd64.zip
-          unzip -q butler.zip -d butler
-          chmod +x butler/butler
-          echo "$PWD/butler" >> "$GITHUB_PATH"
+          unzip -q butler.zip
+          chmod +x butler
+          echo "$PWD" >> "$GITHUB_PATH"
 
       - name: Deploy to Itch.io
         env:
