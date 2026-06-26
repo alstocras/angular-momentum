@@ -247,6 +247,7 @@ horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="HelpMenu" type="ColorRect" parent="CanvasLayer" unique_id=254181593]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -373,6 +374,110 @@ theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
 theme_override_fonts/font = ExtResource("7_2lg1k")
 theme_override_font_sizes/font_size = 17
 text = "place tunneler extractor (build cost 20 fermions): g"
+vertical_alignment = 1
+
+[node name="Guidebook" type="ColorRect" parent="CanvasLayer" unique_id=480843029]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -413.5
+offset_top = -260.0
+offset_right = 413.5
+offset_bottom = 260.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.11372549, 0.11372549, 0.13725491, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Guidebook" unique_id=422754304]
+layout_mode = 0
+offset_right = 827.5
+offset_bottom = 518.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Guidebook/ScrollContainer" unique_id=1878404668]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Title" type="Label" parent="CanvasLayer/Guidebook/ScrollContainer/VBoxContainer" unique_id=542478800]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.4745098, 0.36862746, 1)
+theme_override_fonts/font = ExtResource("7_2lg1k")
+theme_override_font_sizes/font_size = 45
+text = "building reference"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BasicExtractor" type="Label" parent="CanvasLayer/Guidebook/ScrollContainer/VBoxContainer" unique_id=1411162441]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("7_2lg1k")
+theme_override_font_sizes/font_size = 17
+text = "1. basic extractor"
+vertical_alignment = 1
+
+[node name="BasicExtCost" type="Label" parent="CanvasLayer/Guidebook/ScrollContainer/VBoxContainer" unique_id=550282007]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("7_2lg1k")
+theme_override_font_sizes/font_size = 17
+text = "1.1. build cost: 20 iron"
+vertical_alignment = 1
+
+[node name="BasicExtOutput" type="Label" parent="CanvasLayer/Guidebook/ScrollContainer/VBoxContainer" unique_id=644834740]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("7_2lg1k")
+theme_override_font_sizes/font_size = 17
+text = "1.2. mining speed: iron 0.1/frame, bosons (0.1 * spin)/frame, fermions 0/frame"
+vertical_alignment = 1
+
+[node name="BasicExtInput" type="Label" parent="CanvasLayer/Guidebook/ScrollContainer/VBoxContainer" unique_id=1757651296]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("7_2lg1k")
+theme_override_font_sizes/font_size = 17
+text = "1.3. consumes: nothing"
+vertical_alignment = 1
+
+[node name="Spacer" type="Label" parent="CanvasLayer/Guidebook/ScrollContainer/VBoxContainer" unique_id=334496201]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("7_2lg1k")
+theme_override_font_sizes/font_size = 17
+vertical_alignment = 1
+
+[node name="EE" type="Label" parent="CanvasLayer/Guidebook/ScrollContainer/VBoxContainer" unique_id=254067018]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("7_2lg1k")
+theme_override_font_sizes/font_size = 17
+text = "2. electric extractor"
+vertical_alignment = 1
+
+[node name="EECost" type="Label" parent="CanvasLayer/Guidebook/ScrollContainer/VBoxContainer" unique_id=5326367]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("7_2lg1k")
+theme_override_font_sizes/font_size = 17
+text = "2.1. build cost: 20 bosons"
+vertical_alignment = 1
+
+[node name="EEOutput" type="Label" parent="CanvasLayer/Guidebook/ScrollContainer/VBoxContainer" unique_id=1403207412]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("7_2lg1k")
+theme_override_font_sizes/font_size = 17
+text = "2.2. mining speed: iron 1/frame, bosons spin/frame, fermions spin/frame"
+vertical_alignment = 1
+
+[node name="EEInput" type="Label" parent="CanvasLayer/Guidebook/ScrollContainer/VBoxContainer" unique_id=1415147469]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75686276, 0.7647059, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("7_2lg1k")
+theme_override_font_sizes/font_size = 17
+text = "2.3. consumes: 2 eV/s"
 vertical_alignment = 1
 
 [node name="Place" type="AudioStreamPlayer" parent="." unique_id=658205685]
